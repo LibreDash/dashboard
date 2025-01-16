@@ -28,7 +28,7 @@
                     <span class="font-bold text-xl">-</span>
                 </Button>
                 <div class="absolute flex justify-center items-center left-0 right-0 bottom-0 top-0 z-0 w-full">
-                    <span class="font-bold text-lg">{{ temperature }}</span> °C
+                    <span class="font-bold text-4xl">{{ temperature }}</span><span class="text-xl">°C</span>
                 </div>
                 <Button class="absolute right-0 h-full w-20 z-10 focus:ring-0 focus-visible:ring-0" @click="increase">
                     <span class="font-bold text-xl">+</span>
