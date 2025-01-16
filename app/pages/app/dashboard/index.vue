@@ -4,6 +4,8 @@
     "inside": 21,
     "engine": 85
   })
+  const speed = ref<number>(76)
+  const revs = ref<number>(15600)
 </script>
 
 <template>
@@ -14,6 +16,8 @@
       <VentilationModeSwitch />
       <TemperatureControlToggle type="airConditioning" />
       <TemperatureControlToggle type="backScreen" />
+      <RadialDisplay type="speed" :max="240" :currentValue="speed"/>
+      <RadialDisplay type="revs" :max="18000" :currentValue="revs"/>
     </div>
     <div class="block w-4/12 float-end">
       <TemperatureDisplay v-for="(temperature, type) in temperatures" :type="type" :temperature="temperature"/>
