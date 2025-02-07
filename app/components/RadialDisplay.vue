@@ -41,7 +41,7 @@
     setRadialDisplayValue(value.value)
 </script>
 <template>
-    <div class="w-full p-2 h-[32rem] block float-left">
+    <div class="w-1/2 p-2 h-[32rem] block float-left">
         <div class="bg-secondary rounded h-full relative">
             <div class="h-[24rem] w-[24rem] absolute z-0 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                 <div id="radial-container" class="relative h-full w-full">

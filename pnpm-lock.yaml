@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      nitro:
+        specifier: ^0.0.0
+        version: 0.0.0
+      ws:
+        specifier: ^8.18.0
+        version: 8.18.0
     devDependencies:
       '@nuxt/eslint':
         specifier: latest
@@ -2588,6 +2595,9 @@ packages:
 
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+
+  nitro@0.0.0:
+    resolution: {integrity: sha512-01S4adMoYsgKIh5u7Y+sJO8u7hSxRi9ToDBeLTYZJ+L8thyjlCkDrOIWbG+y0SJRE8DpADQYGvJWPebBdJ/xvg==}
 
   nitropack@2.10.4:
     resolution: {integrity: sha512-sJiG/MIQlZCVSw2cQrFG1H6mLeSqHlYfFerRjLKz69vUfdu0EL2l0WdOxlQbzJr3mMv/l4cOlCCLzVRzjzzF/g==}
@@ -6777,6 +6787,8 @@ snapshots:
   nanotar@0.1.1: {}
 
   natural-compare@1.4.0: {}
+
+  nitro@0.0.0: {}
 
   nitropack@2.10.4(typescript@5.7.2):
     dependencies:
