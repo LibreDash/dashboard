@@ -4,6 +4,16 @@ Create Nuxt extendable layer with this GitHub template.
 
 ## Setup
 
+Before installing anything, execute the following commands on your device:
+
+In the first command a Bitrate of 500'000 is used. Change this to whichever bitrate is correct for you vehicle.
+
+```bash
+sudo ip link set can0 up type can bitrate 500000
+sudo ifconfig can0 txqueuelen 65536
+sudo ifconfig can0 up
+```
+
 Make sure to install the dependencies:
 
 ```bash
@@ -38,8 +48,8 @@ Then add the dependency to their `extends` in `nuxt.config`:
 
 ```ts
 defineNuxtConfig({
-  extends: 'your-layer'
-})
+  extends: "your-layer",
+});
 ```
 
 ## Development Server
