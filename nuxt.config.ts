@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
   nitro: {
     experimental: {
-      websocket: true
-    }
-  }
+      websocket: true,
+    },
+  },
 });
