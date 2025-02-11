@@ -5,33 +5,26 @@
     "inside": 21,
     "engine": 85
   })
-  const speed = ref()
-  const maxSpeed = ref()
-  const revs = ref()
-  const maxRevs = ref()
+  const speed = ref<number>(0)
+  const maxSpeed = ref<number>(0)
+  const revs = ref<number>(0)
+  const maxRevs = ref<number>(0)
 
-  const {} = useWebSocket("ws://localhost:3000/_ws")
+  const { data, status } = useWebSocket("ws://localhost:3000/_ws", {
+    autoReconnect: true
+  })
 
-  async function connect() {
-
-    var ws = new WebSocket("ws://localhost:3000/_ws")
-    ws.addEventListener("open", async (event) => {
-      console.log("WS CONNECTED")
-    })
-    ws.addEventListener("message", async (event) => {
-      let vehicleData = await event.data.text()
-      console.log(vehicleData)
-      speed.value = Number(vehicleData['speed'])
-      maxSpeed.value = Number(vehicleData['maxSpeed'])
-      console.log(speed.value)
-      console.log(maxSpeed.value)
-    })
-  }
-
-  // check if this is actually client side and not server :C
-  if (typeof window !== 'undefined') {
-    await connect()
-  }
+  watch(
+    data,
+    async val => {
+      let vehicleDataJson = await val.text()
+      let vehicleData = JSON.parse(vehicleDataJson)
+      speed.value = Number(vehicleData.speed)
+      maxSpeed.value = Number(vehicleData.maxSpeed)
+      revs.value = Number(vehicleData.revs)
+      maxRevs.value = Number(vehicleData.maxRevs)
+    }
+  )
 </script>
 
 <template>
