@@ -14,6 +14,7 @@
   "devDependencies": {
     "@nuxt/eslint": "latest",
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
+    "@types/ws": "^8.5.14",
     "@vueuse/core": "^12.5.0",
     "@vueuse/nuxt": "^12.5.0",
     "eslint": "^9.17.0",
@@ -28,7 +29,9 @@
   },
   "packageManager": "pnpm@9.14.3+sha512.c0f53ee99477ed969b82b289ad011a5d16bf1623c957e7f29eabe8d0c00b574c29b8c7f54f6c67ee710c73f285c8154d07ce44b46fe2c0eeb476a90441bac371",
   "dependencies": {
+    "candied": "^2.2.0",
     "nitro": "^0.0.0",
+    "socketcan": "^4.0.5",
     "ws": "^8.18.0"
   }
 }
