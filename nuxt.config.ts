@@ -2,4 +2,9 @@
 export default defineNuxtConfig({
   extends: [["github:LibreDash/core", { install: true }]],
   future: { compatibilityVersion: 4 },
+  nitro: {
+    experimental: {
+      websocket: true,
+    },
+  },
 });
