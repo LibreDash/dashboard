@@ -1,15 +1,12 @@
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath } from "node:url";
 
 export default defineNuxtConfig({
-  extends: ['..'],
-  modules: ['@nuxt/eslint'],
-
+  compatibilityDate: "2024-12-28",
+  extends: ["..", "@libredash/core"],
+  modules: ["@nuxt/eslint"],
   eslint: {
     config: {
-      // Use the generated ESLint config for lint root project as well
-      rootDir: fileURLToPath(new URL('..', import.meta.url))
-    }
+      rootDir: fileURLToPath(new URL("..", import.meta.url)),
+    },
   },
-
-  compatibilityDate: '2024-12-28'
-})
+});
